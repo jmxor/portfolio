@@ -63,7 +63,7 @@ const experiences = [
           <div class="space-y-3">
             <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
               <h3 class="text-sm font-semibold text-foreground">{{ exp.role }}</h3>
-              <span class="text-xs text-muted-foreground"> · {{ exp.company }} </span>
+              <span class="text-xs text-muted-foreground"> {{ exp.company }} </span>
             </div>
             <p
               v-for="(paragraph, i) in exp.description"
