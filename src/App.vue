@@ -1,12 +1,15 @@
 <script setup lang="ts">
-import { Button } from "@/components/ui/button"
+import { computed } from "vue"
+import { useRoute } from "vue-router"
+import DefaultLayout from "@/layouts/default/DefaultLayout.vue"
+
+const router = useRoute()
+
+const layout = computed(() => router.meta.layout || DefaultLayout)
 </script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
-  <Button>Text button</Button>
+  <component :is="layout">
+    <RouterView />
+  </component>
 </template>
