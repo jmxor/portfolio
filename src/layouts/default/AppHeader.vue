@@ -48,7 +48,7 @@ const mode = useColorMode()
         href="#about"
         class="text-xs font-semibold tracking-widest uppercase text-foreground hover:text-muted-foreground transition-colors"
       >
-        AR
+        JR
       </a>
 
       <!-- Nav links — hidden on mobile -->

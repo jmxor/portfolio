@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { Button } from "@/components/ui/button"
+import SectionHero from "@/components/portfolio/SectionHero.vue"
 </script>
 
 <template>
-  <Button>Portfolio</Button>
+  <SectionHero />
 </template>
