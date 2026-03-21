@@ -16,7 +16,7 @@ const links = [
 </script>
 
 <template>
-  <section id="contact">
+  <section id="contact" class="pb-12 md:pb-18 scroll-mt-14">
     <SectionLabel label="Contact" />
 
     <div v-if="preface" class="mb-12">
@@ -28,7 +28,7 @@ const links = [
     <div class="space-y-0">
       <div v-for="(link, i) in links" :key="link.label">
         <div
-          class="group grid grid-cols-1 items-center justify-between gap-4 py-6 md:grid-cols-[180px_1fr] md:gap-12"
+          class="group grid grid-cols-1 items-center justify-between gap-4 py-6 md:grid-cols-[180px_1fr] md:gap-12 snap-start scroll-mt-(--snap-offset)"
         >
           <span class="text-xs tracking-widest text-muted-foreground uppercase">
             {{ link.label }}

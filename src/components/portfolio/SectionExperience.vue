@@ -40,12 +40,14 @@ const experiences = [
 </script>
 
 <template>
-  <section id="experience">
+  <section id="experience" class="scroll-mt-14 pb-12 md:pb-18">
     <SectionLabel label="Experience" />
 
     <div class="space-y-0">
       <div v-for="(exp, i) in experiences" :key="i">
-        <div class="group grid grid-cols-1 gap-4 py-8 md:grid-cols-[180px_1fr] md:gap-12">
+        <div
+          class="group grid snap-start scroll-mt-(--snap-offset) grid-cols-1 gap-4 py-8 md:grid-cols-[180px_1fr] md:gap-12"
+        >
           <!-- Date -->
           <div class="shrink-0 pt-1 text-xs tracking-wide text-muted-foreground">
             {{ exp.startDate.toLocaleDateString("en-US", { month: "short", year: "numeric" }) }} —

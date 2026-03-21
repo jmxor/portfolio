@@ -27,12 +27,12 @@ const skillGroups = [
 </script>
 
 <template>
-  <section id="skills">
+  <section id="skills" class="pb-12 md:pb-18 scroll-mt-14">
     <SectionLabel label="Skills" />
 
     <div class="space-y-0">
       <div v-for="(group, i) in skillGroups" :key="group.category">
-        <div class="grid grid-cols-1 gap-4 py-6 md:grid-cols-[180px_1fr] md:gap-12">
+        <div class="grid grid-cols-1 gap-4 py-6 md:grid-cols-[180px_1fr] md:gap-12 snap-start scroll-mt-(--snap-offset)">
           <div class="shrink-0 pt-1 text-xs tracking-wide text-muted-foreground">
             {{ group.category }}
           </div>

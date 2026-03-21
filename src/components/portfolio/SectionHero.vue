@@ -18,7 +18,7 @@ const statuses = ["Based in Aylesbury, UK"]
 </script>
 
 <template>
-  <section id="about">
+  <section id="about" class="snap-start scroll-mt-14 pb-12 md:pb-18">
     <!-- Main heading -->
     <div class="mb-10">
       <h1

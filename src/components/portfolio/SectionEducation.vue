@@ -34,12 +34,14 @@ const education = [
 </script>
 
 <template>
-  <section id="education">
+  <section id="education" class="scroll-mt-14 pb-12 md:pb-18">
     <SectionLabel label="Education" />
 
     <div class="space-y-0">
       <div v-for="(edu, i) in education" :key="i">
-        <div class="grid grid-cols-1 gap-4 py-8 md:grid-cols-[180px_1fr] md:gap-12">
+        <div
+          class="grid snap-start scroll-mt-(--snap-offset) grid-cols-1 gap-4 py-8 md:grid-cols-[180px_1fr] md:gap-12"
+        >
           <!-- Date -->
           <div class="shrink-0 pt-1 text-xs tracking-wide text-muted-foreground">
             {{ edu.startDate.toLocaleDateString("en-US", { month: "short", year: "numeric" }) }} —

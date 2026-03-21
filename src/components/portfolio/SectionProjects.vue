@@ -26,12 +26,12 @@ const projects = [
 </script>
 
 <template>
-  <section id="projects">
+  <section id="projects" class="pb-12 md:pb-18 scroll-mt-14">
     <SectionLabel label="Projects" />
 
     <div class="space-y-0">
       <div v-for="(project, i) in projects" :key="i">
-        <div class="group grid grid-cols-1 gap-4 py-8 md:grid-cols-[180px_1fr] md:gap-12">
+        <div class="group grid grid-cols-1 gap-4 py-8 md:grid-cols-[180px_1fr] md:gap-12 snap-start scroll-mt-(--snap-offset)">
           <!-- Year -->
           <div class="shrink-0 pt-1 text-xs tracking-wide text-muted-foreground">
             {{ project.year }}
