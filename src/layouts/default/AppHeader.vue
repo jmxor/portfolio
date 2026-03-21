@@ -48,7 +48,7 @@ const mode = useColorMode()
         href="#about"
         class="text-xs font-semibold tracking-widest text-foreground uppercase transition-colors hover:text-muted-foreground"
       >
-        JR
+        Jmxor.dev
       </a>
 
       <!-- Nav links — hidden on mobile -->
