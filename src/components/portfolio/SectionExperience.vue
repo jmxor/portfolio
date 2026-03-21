@@ -10,8 +10,7 @@ const experiences = [
     role: "Graduate Technical Consultant",
     company: "Responsiv Solutions",
     description: [
-      "Owned and managed the implementation and deployment of a new Spring Boot and Vue.js application to enable the creation and tracking of B2B offers, alongside the adoption of a new frontend library Shadcn.",
-      "Worked as part of a small team implementing multiple usability features, an idempotent bulk ingest endpoint and an obfuscated data export utility in a time tracking and project management application with a Spring Boot backend and Vuetify frontend.",
+      "Owned and managed the implementation and deployment of several Spring Boot and Vue.js applications. Led the adoption of a new frontend library Shadcn. Assisted in the development and maintainance of multiple customer projects using IBM ACE, MQ, BAW and DB2.",
     ],
     tags: ["Spring Boot", "Vue.js", "PostgreSQL", "Shadcn", "TailwindCSS"],
   },
@@ -21,9 +20,7 @@ const experiences = [
     role: "Software Engineer Intern",
     company: "Lukka Data Solutions",
     description: [
-      "Worked as part of a small team of 3 migrating 7 reporting and history features from a legacy application to a newer alternative using NextJS, Tailwind CSS and restful Swagger APIs specifications.",
-      "Combined independent work with weekly team and supervisor meetings to ensure that all milestones and features were met 2 weeks earlier than expected.",
-      "Implemented 31 custom functional components using Figma style references to aid in the integration of features into the new application.",
+      "Worked as part of a small team migrating reporting and history features from a legacy application to a new website using NextJS, Tailwind CSS and Open API specifications. Close collaboration within the team allowed the project goals to be met 2 weeks earlier than expected.",
     ],
     tags: ["Next.js", "React.js", "TailwindCSS", "OpenAPI"],
   },
