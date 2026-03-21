@@ -19,27 +19,27 @@ const links = [
   <section id="contact" class="py-16 md:py-24">
     <SectionLabel label="Contact" />
 
-    <div class="max-w-xl mb-12">
-      <p class="text-base text-muted-foreground leading-relaxed">
+    <div class="mb-12 max-w-xl">
+      <p class="text-base leading-relaxed text-muted-foreground">
         {{ preface }}
       </p>
     </div>
 
     <div class="space-y-0">
       <div v-for="(link, i) in links" :key="link.label">
-        <div class="py-5 flex items-center justify-between group">
-          <span class="text-xs text-muted-foreground tracking-widest uppercase">
+        <div class="group flex items-center justify-between py-5">
+          <span class="text-xs tracking-widest text-muted-foreground uppercase">
             {{ link.label }}
           </span>
           <a
             :href="link.href"
             target="_blank"
             rel="noopener noreferrer"
-            class="flex items-center gap-2 text-sm text-foreground hover:text-muted-foreground transition-colors group/link"
+            class="group/link flex items-center gap-2 text-sm text-foreground transition-colors hover:text-muted-foreground"
           >
             {{ link.value }}
             <ArrowUpRight
-              class="h-3.5 w-3.5 opacity-0 group-hover/link:opacity-100 transition-opacity"
+              class="h-3.5 w-3.5 opacity-0 transition-opacity group-hover/link:opacity-100"
             />
           </a>
         </div>

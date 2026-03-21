@@ -39,9 +39,9 @@ const education = [
 
     <div class="space-y-0">
       <div v-for="(edu, i) in education" :key="i">
-        <div class="py-8 grid grid-cols-1 md:grid-cols-[180px_1fr] gap-4 md:gap-12">
+        <div class="grid grid-cols-1 gap-4 py-8 md:grid-cols-[180px_1fr] md:gap-12">
           <!-- Date -->
-          <div class="text-xs text-muted-foreground tracking-wide pt-1 shrink-0">
+          <div class="shrink-0 pt-1 text-xs tracking-wide text-muted-foreground">
             {{ edu.startDate.toLocaleDateString("en-US", { month: "short", year: "numeric" }) }} —
             {{
               edu.endDate
@@ -52,7 +52,7 @@ const education = [
 
           <!-- Content -->
           <div class="space-y-3">
-            <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-3">
               <h3 class="text-sm font-semibold text-foreground">{{ edu.degree }}</h3>
               <span class="text-xs text-muted-foreground"> {{ edu.institution }} </span>
             </div>
@@ -61,7 +61,7 @@ const education = [
               <p
                 v-for="(note, j) in edu.note"
                 :key="j"
-                class="text-sm text-muted-foreground leading-relaxed"
+                class="text-sm leading-relaxed text-muted-foreground"
               >
                 {{ note }}
               </p>

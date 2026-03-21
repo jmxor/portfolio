@@ -32,8 +32,8 @@ const skillGroups = [
 
     <div class="space-y-0">
       <div v-for="(group, i) in skillGroups" :key="group.category">
-        <div class="py-6 grid grid-cols-1 md:grid-cols-[180px_1fr] gap-4 md:gap-12">
-          <div class="text-xs text-muted-foreground tracking-wide pt-1 shrink-0">
+        <div class="grid grid-cols-1 gap-4 py-6 md:grid-cols-[180px_1fr] md:gap-12">
+          <div class="shrink-0 pt-1 text-xs tracking-wide text-muted-foreground">
             {{ group.category }}
           </div>
           <div class="flex flex-wrap gap-1.5">
@@ -41,7 +41,7 @@ const skillGroups = [
               v-for="(item, j) in group.items"
               :key="j"
               variant="secondary"
-              class="text-[10px] px-2.5 py-1 rounded-sm tracking-wide border border-border bg-(--tag-bg) text-(--tag-fg) font-normal"
+              class="rounded-sm border border-border bg-(--tag-bg) px-2.5 py-1 text-[10px] font-normal tracking-wide text-(--tag-fg)"
             >
               {{ item }}
             </Badge>

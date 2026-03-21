@@ -6,7 +6,7 @@ import AppHeader from "@/layouts/default/AppHeader.vue"
 <template>
   <div class="min-h-screen bg-background text-foreground">
     <AppHeader />
-    <main class="pt-14 max-w-3xl mx-auto px-6 md:px-8">
+    <main class="mx-auto max-w-3xl px-6 pt-14 md:px-8">
       <slot />
     </main>
     <AppFooter />

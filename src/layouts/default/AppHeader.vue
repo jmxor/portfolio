@@ -37,26 +37,26 @@ const mode = useColorMode()
   <header
     :class="
       cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/80 backdrop-blur-md',
-        isScrolled && ' border-b border-border',
+        'fixed top-0 right-0 left-0 z-50 bg-background/80 backdrop-blur-md transition-all duration-300',
+        isScrolled && 'border-b border-border',
       )
     "
   >
-    <nav class="max-w-3xl mx-auto px-6 md:px-8 h-14 flex items-center justify-between">
+    <nav class="mx-auto flex h-14 max-w-3xl items-center justify-between px-6 md:px-8">
       <!-- Brand -->
       <a
         href="#about"
-        class="text-xs font-semibold tracking-widest uppercase text-foreground hover:text-muted-foreground transition-colors"
+        class="text-xs font-semibold tracking-widest text-foreground uppercase transition-colors hover:text-muted-foreground"
       >
         JR
       </a>
 
       <!-- Nav links — hidden on mobile -->
-      <ul class="hidden md:flex items-center gap-6">
+      <ul class="hidden items-center gap-6 md:flex">
         <li v-for="item in navItems" :key="item.href">
           <a
             :href="item.href"
-            class="text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
+            class="text-xs tracking-widest text-muted-foreground uppercase transition-colors hover:text-foreground"
           >
             {{ item.label }}
           </a>

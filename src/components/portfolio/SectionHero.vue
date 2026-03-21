@@ -23,24 +23,24 @@ const statuses = ["Based in Aylesbury, UK"]
     <SectionLabel label="Portfolio · 2026" />
 
     <!-- Main heading -->
-    <div class="max-w-3xl mb-10">
+    <div class="mb-10 max-w-3xl">
       <h1
-        class="text-4xl md:text-6xl font-bold leading-tight tracking-tight text-balance text-foreground mb-4"
+        class="mb-4 text-4xl leading-tight font-bold tracking-tight text-balance text-foreground md:text-6xl"
       >
         {{ name }}
       </h1>
-      <p class="text-lg md:text-xl text-muted-foreground leading-relaxed text-pretty">
+      <p class="text-lg leading-relaxed text-pretty text-muted-foreground md:text-xl">
         {{ summary }}
       </p>
     </div>
 
     <!-- Status badges -->
-    <div class="flex flex-wrap gap-2 mb-10">
+    <div class="mb-10 flex flex-wrap gap-2">
       <Badge
         v-for="status in statuses"
         :key="status"
         variant="secondary"
-        class="text-xs px-3 py-1 rounded-sm font-mono tracking-wide border border-border bg-(--tag-bg) text-(--tag-fg)"
+        class="rounded-sm border border-border bg-(--tag-bg) px-3 py-1 font-mono text-xs tracking-wide text-(--tag-fg)"
       >
         {{ status }}
       </Badge>
@@ -49,16 +49,16 @@ const statuses = ["Based in Aylesbury, UK"]
     <Separator class="mb-10" />
 
     <!-- CTA + Socials -->
-    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+    <div class="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
       <div class="flex items-center gap-3">
-        <Button asChild size="sm" class="rounded-sm text-xs tracking-widest uppercase px-5">
+        <Button asChild size="sm" class="rounded-sm px-5 text-xs tracking-widest uppercase">
           <a href="#contact"> Get in touch <ArrowDownRight class="ml-2 h-3.5 w-3.5" /> </a>
         </Button>
         <Button
           variant="ghost"
           size="sm"
           asChild
-          class="rounded-sm text-xs tracking-widest uppercase px-5 text-muted-foreground"
+          class="rounded-sm px-5 text-xs tracking-widest text-muted-foreground uppercase"
         >
           <a href="#projects">View work</a>
         </Button>

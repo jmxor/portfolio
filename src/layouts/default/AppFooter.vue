@@ -1,9 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-  <footer class="border-t border">
+  <footer class="border border-t">
     <div
-      class="max-w-3xl mx-auto h-12 px-6 md:px-8 flex flex-row items-center justify-between gap-3 text-xs text-muted-foreground tracking-wide"
+      class="mx-auto flex h-12 max-w-3xl flex-row items-center justify-between gap-3 px-6 text-xs tracking-wide text-muted-foreground md:px-8"
     >
       <span>&copy; {{ new Date().getFullYear() }} James Rippeth. All rights reserved.</span>
     </div>

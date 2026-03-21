@@ -48,9 +48,9 @@ const experiences = [
 
     <div class="space-y-0">
       <div v-for="(exp, i) in experiences" :key="i">
-        <div class="py-8 grid grid-cols-1 md:grid-cols-[180px_1fr] gap-4 md:gap-12 group">
+        <div class="group grid grid-cols-1 gap-4 py-8 md:grid-cols-[180px_1fr] md:gap-12">
           <!-- Date -->
-          <div class="text-xs text-muted-foreground tracking-wide pt-1 shrink-0">
+          <div class="shrink-0 pt-1 text-xs tracking-wide text-muted-foreground">
             {{ exp.startDate.toLocaleDateString("en-US", { month: "short", year: "numeric" }) }} —
             {{
               exp.endDate
@@ -61,14 +61,14 @@ const experiences = [
 
           <!-- Content -->
           <div class="space-y-3">
-            <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-3">
               <h3 class="text-sm font-semibold text-foreground">{{ exp.role }}</h3>
               <span class="text-xs text-muted-foreground"> {{ exp.company }} </span>
             </div>
             <p
               v-for="(paragraph, i) in exp.description"
               :key="i"
-              class="text-sm text-muted-foreground leading-relaxed"
+              class="text-sm leading-relaxed text-muted-foreground"
             >
               {{ paragraph }}
             </p>
@@ -77,7 +77,7 @@ const experiences = [
                 v-for="tag in exp.tags"
                 :key="tag"
                 variant="secondary"
-                class="text-[10px] px-2 py-0.5 rounded-sm tracking-wide border border-border bg-(--tag-bg) text-(--tag-fg) font-normal"
+                class="rounded-sm border border-border bg-(--tag-bg) px-2 py-0.5 text-[10px] font-normal tracking-wide text-(--tag-fg)"
               >
                 {{ tag }}
               </Badge>

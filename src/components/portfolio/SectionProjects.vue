@@ -31,9 +31,9 @@ const projects = [
 
     <div class="space-y-0">
       <div v-for="(project, i) in projects" :key="i">
-        <div class="py-8 grid grid-cols-1 md:grid-cols-[180px_1fr] gap-4 md:gap-12 group">
+        <div class="group grid grid-cols-1 gap-4 py-8 md:grid-cols-[180px_1fr] md:gap-12">
           <!-- Year -->
-          <div class="text-xs text-muted-foreground tracking-wide pt-1 shrink-0">
+          <div class="shrink-0 pt-1 text-xs tracking-wide text-muted-foreground">
             {{ project.year }}
           </div>
 
@@ -45,7 +45,7 @@ const projects = [
                 variant="ghost"
                 size="icon"
                 asChild
-                class="h-5 w-5 rounded-sm text-muted-foreground hover:text-foreground opacity-0 group-hover:opacity-100 transition-opacity -mt-0.5"
+                class="-mt-0.5 h-5 w-5 rounded-sm text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100 hover:text-foreground"
               >
                 <a
                   :href="project.href"
@@ -57,13 +57,13 @@ const projects = [
                 </a>
               </Button>
             </div>
-            <p class="text-sm text-muted-foreground leading-relaxed">{{ project.description }}</p>
+            <p class="text-sm leading-relaxed text-muted-foreground">{{ project.description }}</p>
             <div class="flex flex-wrap gap-1.5 pt-1">
               <Badge
                 v-for="(tag, j) in project.tags"
                 :key="j"
                 variant="secondary"
-                class="text-[10px] px-2 py-0.5 rounded-sm tracking-wide border border-border bg-(--tag-bg) text-(--tag-fg) font-normal"
+                class="rounded-sm border border-border bg-(--tag-bg) px-2 py-0.5 text-[10px] font-normal tracking-wide text-(--tag-fg)"
               >
                 {{ tag }}
               </Badge>
