@@ -27,7 +27,7 @@ const skillGroups = [
 </script>
 
 <template>
-  <section id="skills" class="py-16 md:py-24">
+  <section id="skills">
     <SectionLabel label="Skills" />
 
     <div class="space-y-0">

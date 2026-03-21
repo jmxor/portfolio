@@ -18,9 +18,9 @@ const statuses = ["Based in Aylesbury, UK"]
 </script>
 
 <template>
-  <section id="about" class="pt-12 pb-16 md:pt-24 md:pb-24">
+  <section id="about">
     <!-- Main heading -->
-    <div class="mb-10 max-w-3xl">
+    <div class="mb-10">
       <h1
         class="mb-4 text-4xl leading-tight font-bold tracking-tight text-balance text-foreground md:text-6xl"
       >

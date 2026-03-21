@@ -16,10 +16,10 @@ const links = [
 </script>
 
 <template>
-  <section id="contact" class="py-16 md:py-24">
+  <section id="contact">
     <SectionLabel label="Contact" />
 
-    <div class="mb-12 max-w-xl">
+    <div v-if="preface" class="mb-12">
       <p class="text-base leading-relaxed text-muted-foreground">
         {{ preface }}
       </p>
@@ -27,7 +27,9 @@ const links = [
 
     <div class="space-y-0">
       <div v-for="(link, i) in links" :key="link.label">
-        <div class="group flex items-center justify-between py-5">
+        <div
+          class="group grid grid-cols-1 items-center justify-between gap-4 py-6 md:grid-cols-[180px_1fr] md:gap-12"
+        >
           <span class="text-xs tracking-widest text-muted-foreground uppercase">
             {{ link.label }}
           </span>

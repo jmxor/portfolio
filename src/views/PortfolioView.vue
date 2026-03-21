@@ -8,10 +8,12 @@ import SectionSkills from "@/components/portfolio/SectionSkills.vue"
 </script>
 
 <template>
-  <SectionHero />
-  <SectionExperience />
-  <SectionEducation />
-  <SectionProjects />
-  <SectionSkills />
-  <SectionContact />
+  <div class="flex flex-col gap-12 py-12 md:gap-18 md:py-24">
+    <SectionHero />
+    <SectionExperience />
+    <SectionEducation />
+    <SectionProjects />
+    <SectionSkills />
+    <SectionContact />
+  </div>
 </template>

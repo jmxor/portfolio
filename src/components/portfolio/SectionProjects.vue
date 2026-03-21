@@ -26,7 +26,7 @@ const projects = [
 </script>
 
 <template>
-  <section id="projects" class="py-16 md:py-24">
+  <section id="projects">
     <SectionLabel label="Projects" />
 
     <div class="space-y-0">
