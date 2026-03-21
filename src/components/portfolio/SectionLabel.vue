@@ -3,10 +3,7 @@ defineProps<{ label: string }>()
 </script>
 
 <template>
-  <div
-    class="flex items-center gap-3 mb-10 text-xs text-muted-foreground tracking-widest uppercase"
-  >
-    <span class="inline-block w-8 h-px bg-border" />
-    <span>{{ label }}</span>
+  <div class="mb-10 flex items-center gap-3 text-sm tracking-widest uppercase">
+    <span class="border-b-2 border-primary">{{ label }}</span>
   </div>
 </template>
