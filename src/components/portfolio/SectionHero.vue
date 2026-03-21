@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { ArrowDownRight, Github, Linkedin, Mail, Twitter } from "lucide-vue-next"
+import { ArrowDownRight, Github, Linkedin } from "lucide-vue-next"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
+import SectionLabel from "@/components/portfolio/SectionLabel.vue"
 
 const name = "James Rippeth"
 
@@ -19,13 +20,7 @@ const statuses = ["Based in Aylesbury, UK"]
 
 <template>
   <section id="about" class="pt-12 pb-16 md:pt-24 md:pb-24">
-    <!-- Top meta line -->
-    <div
-      class="flex items-center gap-3 mb-10 text-xs text-muted-foreground tracking-widest uppercase"
-    >
-      <span class="inline-block w-8 h-px bg-border" />
-      <span>Portfolio · 2026</span>
-    </div>
+    <SectionLabel label="Portfolio · 2026" />
 
     <!-- Main heading -->
     <div class="max-w-3xl mb-10">
