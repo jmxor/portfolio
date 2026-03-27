@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import SectionLabel from "@/components/portfolio/SectionLabel.vue"
+import ArticleLayout from "@/components/portfolio/ArticleLayout.vue";
 
 const education = [
   {
@@ -36,38 +37,35 @@ const education = [
   <section id="education">
     <SectionLabel label="Education" />
 
-    <div class="space-y-0">
-      <div v-for="(edu, i) in education" :key="i">
-        <div class="grid grid-cols-1 gap-4 py-4 md:grid-cols-[180px_1fr] md:gap-12">
-          <!-- Date -->
-          <div class="shrink-0 pt-1 text-xs tracking-wide text-muted-foreground">
-            {{ edu.startDate.toLocaleDateString("en-US", { month: "short", year: "numeric" }) }} —
-            {{
-              edu.endDate
-                ? edu.endDate.toLocaleDateString("en-US", { month: "short", year: "numeric" })
-                : "Present"
-            }}
+    <ArticleLayout v-for="(edu, i) in education" :key="i">
+      <template #label>
+        {{ edu.startDate.toLocaleDateString("en-US", { month: "short", year: "numeric" }) }} —
+        {{
+          edu.endDate
+            ? edu.endDate.toLocaleDateString("en-US", { month: "short", year: "numeric" })
+            : "Present"
+        }}
+      </template>
+
+      <template #content>
+        <div class="space-y-3">
+          <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-3">
+            <h3 class="text-sm font-semibold text-foreground">{{ edu.degree }}</h3>
+            <span class="text-xs text-muted-foreground"> {{ edu.institution }} </span>
           </div>
 
-          <!-- Content -->
-          <div class="space-y-3">
-            <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-3">
-              <h3 class="text-sm font-semibold text-foreground">{{ edu.degree }}</h3>
-              <span class="text-xs text-muted-foreground"> {{ edu.institution }} </span>
-            </div>
-
-            <div class="space-y-1">
-              <p
-                v-for="(note, j) in edu.note"
-                :key="j"
-                class="text-sm leading-relaxed text-muted-foreground"
-              >
-                {{ note }}
-              </p>
-            </div>
+          <div class="space-y-1">
+            <p
+              v-for="(note, j) in edu.note"
+              :key="j"
+              class="text-sm leading-relaxed text-muted-foreground"
+            >
+              {{ note }}
+            </p>
           </div>
         </div>
-      </div>
-    </div>
+
+      </template>
+    </ArticleLayout>
   </section>
 </template>
