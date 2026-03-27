@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import SectionLabel from "@/components/portfolio/SectionLabel.vue"
-import ArticleLayout from "@/components/portfolio/ArticleLayout.vue";
+import ArticleLayout from "@/components/portfolio/ArticleLayout.vue"
+import {formatDate} from "@/lib/utils.ts";
 
 const education = [
   {
@@ -39,12 +40,8 @@ const education = [
 
     <ArticleLayout v-for="(edu, i) in education" :key="i">
       <template #label>
-        {{ edu.startDate.toLocaleDateString("en-US", { month: "short", year: "numeric" }) }} —
-        {{
-          edu.endDate
-            ? edu.endDate.toLocaleDateString("en-US", { month: "short", year: "numeric" })
-            : "Present"
-        }}
+        {{ formatDate(edu.startDate) }} —
+        {{edu.endDate ? formatDate(edu.endDate) : "Present" }}
       </template>
 
       <template #content>
@@ -64,7 +61,6 @@ const education = [
             </p>
           </div>
         </div>
-
       </template>
     </ArticleLayout>
   </section>

@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { Badge } from "@/components/ui/badge"
 import SectionLabel from "@/components/portfolio/SectionLabel.vue"
-import ArticleLayout from "@/components/portfolio/ArticleLayout.vue";
+import ArticleLayout from "@/components/portfolio/ArticleLayout.vue"
+import { formatDate } from "@/lib/utils.ts"
 
 const experiences = [
   {
@@ -29,7 +30,7 @@ const experiences = [
     endDate: new Date("2020-05"),
 
     role: "Volunteer",
-    company: "Stocklacke Park School",
+    company: "Stocklake Park School",
     description: [
       "Organized and led weekly group sporting activities for the students within a team of 4 volunteers.",
       "Provided supervision and engaged with students in small groups to help with their social skills development.",
@@ -43,42 +44,37 @@ const experiences = [
   <section id="experience">
     <SectionLabel label="Experience" />
 
-      <ArticleLayout v-for="(exp, i) in experiences" :key="i">
-        <template #label>
-          {{ exp.startDate.toLocaleDateString("en-US", { month: "short", year: "numeric" }) }} —
-          {{
-            exp.endDate
-              ? exp.endDate.toLocaleDateString("en-US", { month: "short", year: "numeric" })
-              : "Present"
-          }}
-        </template>
+    <ArticleLayout v-for="(exp, i) in experiences" :key="i">
+      <template #label>
+        {{ formatDate(exp.startDate) }} —
+        {{ exp.endDate ? formatDate(exp.endDate) : "Present" }}
+      </template>
 
-
-        <template #content>
-          <div class="space-y-3">
-            <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-3">
-              <h3 class="text-sm font-semibold text-foreground">{{ exp.role }}</h3>
-              <span class="text-xs text-muted-foreground"> {{ exp.company }} </span>
-            </div>
-            <p
-              v-for="(paragraph, i) in exp.description"
-              :key="i"
-              class="text-sm leading-relaxed text-muted-foreground"
-            >
-              {{ paragraph }}
-            </p>
-            <div class="flex flex-wrap gap-1.5 pt-1">
-              <Badge
-                v-for="tag in exp.tags"
-                :key="tag"
-                variant="secondary"
-                class="rounded-sm border border-border bg-(--tag-bg) px-2 py-0.5 text-[10px] font-normal tracking-wide text-(--tag-fg)"
-              >
-                {{ tag }}
-              </Badge>
-            </div>
+      <template #content>
+        <div class="space-y-3">
+          <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-3">
+            <h3 class="text-sm font-semibold text-foreground">{{ exp.role }}</h3>
+            <span class="text-xs text-muted-foreground"> {{ exp.company }} </span>
           </div>
-        </template>
-      </ArticleLayout>
+          <p
+            v-for="(paragraph, i) in exp.description"
+            :key="i"
+            class="text-sm leading-relaxed text-muted-foreground"
+          >
+            {{ paragraph }}
+          </p>
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <Badge
+              v-for="tag in exp.tags"
+              :key="tag"
+              variant="secondary"
+              class="rounded-sm border border-border bg-(--tag-bg) px-2 py-0.5 text-[10px] font-normal tracking-wide text-(--tag-fg)"
+            >
+              {{ tag }}
+            </Badge>
+          </div>
+        </div>
+      </template>
+    </ArticleLayout>
   </section>
 </template>
