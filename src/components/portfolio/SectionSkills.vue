@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { Badge } from "@/components/ui/badge"
-import { Separator } from "@/components/ui/separator"
 import SectionLabel from "@/components/portfolio/SectionLabel.vue"
 
 const skillGroups = [
@@ -32,7 +31,7 @@ const skillGroups = [
 
     <div class="space-y-0">
       <div v-for="(group, i) in skillGroups" :key="group.category">
-        <div class="grid grid-cols-1 gap-4 py-6 md:grid-cols-[180px_1fr] md:gap-12">
+        <div class="grid grid-cols-1 gap-4 py-4 md:grid-cols-[180px_1fr] md:gap-12">
           <div class="shrink-0 pt-1 text-xs tracking-wide text-muted-foreground">
             {{ group.category }}
           </div>
@@ -47,7 +46,6 @@ const skillGroups = [
             </Badge>
           </div>
         </div>
-        <Separator v-if="i < skillGroups.length - 1" />
       </div>
     </div>
   </section>

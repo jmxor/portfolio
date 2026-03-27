@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Separator } from "@/components/ui/separator"
 import SectionLabel from "@/components/portfolio/SectionLabel.vue"
 
 const education = [
@@ -39,7 +38,7 @@ const education = [
 
     <div class="space-y-0">
       <div v-for="(edu, i) in education" :key="i">
-        <div class="grid grid-cols-1 gap-4 py-8 md:grid-cols-[180px_1fr] md:gap-12">
+        <div class="grid grid-cols-1 gap-4 py-4 md:grid-cols-[180px_1fr] md:gap-12">
           <!-- Date -->
           <div class="shrink-0 pt-1 text-xs tracking-wide text-muted-foreground">
             {{ edu.startDate.toLocaleDateString("en-US", { month: "short", year: "numeric" }) }} —
@@ -68,7 +67,6 @@ const education = [
             </div>
           </div>
         </div>
-        <Separator v-if="i < education.length - 1" />
       </div>
     </div>
   </section>

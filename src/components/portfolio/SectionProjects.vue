@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { Button } from "@/components/ui/button"
-import { Separator } from "@/components/ui/separator"
 import { Badge } from "@/components/ui/badge"
 import { ArrowUpRight } from "lucide-vue-next"
 import SectionLabel from "@/components/portfolio/SectionLabel.vue"
@@ -31,7 +30,7 @@ const projects = [
 
     <div class="space-y-0">
       <div v-for="(project, i) in projects" :key="i">
-        <div class="group grid grid-cols-1 gap-4 py-8 md:grid-cols-[180px_1fr] md:gap-12">
+        <div class="group grid grid-cols-1 gap-4 py-4 md:grid-cols-[180px_1fr] md:gap-12">
           <!-- Year -->
           <div class="shrink-0 pt-1 text-xs tracking-wide text-muted-foreground">
             {{ project.year }}
@@ -70,7 +69,6 @@ const projects = [
             </div>
           </div>
         </div>
-        <Separator v-if="i < projects.length - 1" />
       </div>
     </div>
   </section>

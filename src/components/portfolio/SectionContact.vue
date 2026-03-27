@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Separator } from "@/components/ui/separator"
 import SectionLabel from "@/components/portfolio/SectionLabel.vue"
 import { ArrowUpRight } from "lucide-vue-next"
 
@@ -28,7 +27,7 @@ const links = [
     <div class="space-y-0">
       <div v-for="(link, i) in links" :key="link.label">
         <div
-          class="group grid grid-cols-1 items-center justify-between gap-4 py-6 md:grid-cols-[180px_1fr] md:gap-12"
+          class="group grid grid-cols-1 items-center justify-between gap-4 py-4 md:grid-cols-[180px_1fr] md:gap-12"
         >
           <span class="text-xs tracking-widest text-muted-foreground uppercase">
             {{ link.label }}
@@ -45,7 +44,6 @@ const links = [
             />
           </a>
         </div>
-        <Separator v-if="i < links.length - 1" />
       </div>
     </div>
   </section>

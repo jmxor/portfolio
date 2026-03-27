@@ -2,7 +2,6 @@
 import { ArrowDownRight, Github, Linkedin } from "lucide-vue-next"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Separator } from "@/components/ui/separator"
 
 const name = "James Rippeth"
 
@@ -42,8 +41,6 @@ const statuses = ["Based in Aylesbury, UK"]
         {{ status }}
       </Badge>
     </div>
-
-    <Separator class="mb-10" />
 
     <!-- CTA + Socials -->
     <div class="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { Badge } from "@/components/ui/badge"
-import { Separator } from "@/components/ui/separator"
 import SectionLabel from "@/components/portfolio/SectionLabel.vue"
 
 const experiences = [
@@ -45,7 +44,7 @@ const experiences = [
 
     <div class="space-y-0">
       <div v-for="(exp, i) in experiences" :key="i">
-        <div class="group grid grid-cols-1 gap-4 py-8 md:grid-cols-[180px_1fr] md:gap-12">
+        <div class="group grid grid-cols-1 gap-4 py-4 md:grid-cols-[180px_1fr] md:gap-12">
           <!-- Date -->
           <div class="shrink-0 pt-1 text-xs tracking-wide text-muted-foreground">
             {{ exp.startDate.toLocaleDateString("en-US", { month: "short", year: "numeric" }) }} —
@@ -81,7 +80,6 @@ const experiences = [
             </div>
           </div>
         </div>
-        <Separator v-if="i < experiences.length - 1" />
       </div>
     </div>
   </section>
