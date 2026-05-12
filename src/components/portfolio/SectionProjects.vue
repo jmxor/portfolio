@@ -3,14 +3,13 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ArrowUpRight } from "lucide-vue-next"
 import SectionLabel from "@/components/portfolio/SectionLabel.vue"
-import ArticleLayout from "@/components/portfolio/ArticleLayout.vue";
+import ArticleLayout from "@/components/portfolio/ArticleLayout.vue"
 
 const projects = [
   {
     year: "2026",
     name: "Portfolio Website",
-    description:
-      "An open-source analytics dashboard for self-hosted applications. Features real-time WebSocket updates, customizable widgets, and a role-based permissions system.",
+    description: "A simple portfolio designed as an animated CV.",
     tags: ["Vue.js", "TypeScript", "Tailwind", "Vite"],
     href: "#",
   },
@@ -31,7 +30,7 @@ const projects = [
 
     <ArticleLayout v-for="(project, i) in projects" :key="i">
       <template #label>
-      {{ project.year }}
+        {{ project.year }}
       </template>
 
       <template #content>
@@ -66,7 +65,6 @@ const projects = [
             </Badge>
           </div>
         </div>
-
       </template>
     </ArticleLayout>
   </section>

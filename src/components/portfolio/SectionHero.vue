@@ -13,7 +13,7 @@ const socialLinks = [
   { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/james-rippeth" },
 ]
 
-const statuses = ["Based in Aylesbury, UK"]
+const statuses = ["Based in Buckinghamshire, UK", "Open to Relocation", "Open to Remote"]
 </script>
 
 <template>
