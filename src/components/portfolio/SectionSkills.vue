@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Badge } from "@/components/ui/badge"
 import SectionLabel from "@/components/portfolio/SectionLabel.vue"
-import ArticleLayout from "@/components/portfolio/ArticleLayout.vue";
+import ArticleLayout from "@/components/portfolio/ArticleLayout.vue"
 
 const skillGroups = [
   {

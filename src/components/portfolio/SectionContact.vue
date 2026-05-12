@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import SectionLabel from "@/components/portfolio/SectionLabel.vue"
 import { ArrowUpRight } from "lucide-vue-next"
-import ArticleLayout from "@/components/portfolio/ArticleLayout.vue";
+import ArticleLayout from "@/components/portfolio/ArticleLayout.vue"
 
 const links = [
   { label: "GitHub", value: "github.com/jmxor", href: "https://github.com/jmxor" },
